@@ -79,18 +79,10 @@ public class ActivityOntap1 extends AppCompatActivity {
         btnQuayve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quayvetrangchu();
+                finish();
             }
         });
 
-    }
-    //Tạo Hàm Quayvetrangchu;
-    private void quayvetrangchu()
-    {
-        //khởi tạo và thiết lập
-        Intent intentTrangchu=new Intent(this,MainActivity.class);
-        //Mở Trang Chủ
-        startActivity(intentTrangchu);
     }
     //Tạo Hàm PageBao(Báo Bóng Đá)
     private void PageBao()

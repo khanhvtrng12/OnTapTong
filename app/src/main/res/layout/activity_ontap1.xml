@@ -143,6 +143,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/quayvetrangchu"
         android:text="Quay về trang chủ"
-        tools:ignore="InvalidId">
+        tools:ignore="InvalidId"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        >
     </Button>
 </LinearLayout>
