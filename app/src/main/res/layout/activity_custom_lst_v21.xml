@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity21">
+
+    <TextView
+        android:id="@+id/txt_stt"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/txt_khoahoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/txt_stt"
+        android:layout_alignTop="@id/txt_stt"
+        android:textSize="18sp"
+        android:layout_marginLeft="45dp"
+        android:text="Lập trình Android" />
+
+    <TextView
+        android:id="@+id/txt_hocphi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/txt_khoahoc"
+        android:layout_toEndOf="@id/txt_stt"
+        android:textSize="18sp"
+        android:text="500000.0" />
+</RelativeLayout>
