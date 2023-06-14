@@ -3,5 +3,5 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Cấu hình" />
-    <item android:title="Thoát" />
+    <item android:id="@+id/item1" android:title="Thoát" />
 </menu>
