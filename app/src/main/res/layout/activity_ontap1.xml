@@ -21,7 +21,7 @@
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:layout_gravity="center"
-                android:src="@drawable/bongdaplus_icon"
+                android:src="@drawable/ic_launcher_football_foreground"
                 android:id="@+id/imageBongdaId"/>
             <TextView
                 android:layout_width="200dp"
@@ -39,7 +39,7 @@
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:layout_gravity="center"
-                android:src="@drawable/gg_icon"
+                android:src="@drawable/ic_launcher_ggsearch_foreground"
                 android:id="@+id/imageGGid"/>
             <TextView
                 android:layout_width="200dp"
@@ -65,7 +65,7 @@
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:layout_gravity="center"
-                android:src="@drawable/fb_icon"
+                android:src="@drawable/ic_launcher_facebook_foreground"
                 android:id="@+id/imageFbId"/>
             <TextView
                 android:layout_width="200dp"
@@ -83,7 +83,7 @@
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:layout_gravity="center"
-                android:src="@drawable/gmail_icon"
+                android:src="@drawable/ic_launcher_email_foreground"
                 android:id="@+id/imageGGmailid"/>
             <TextView
                 android:layout_width="200dp"
@@ -109,7 +109,7 @@
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:layout_gravity="center"
-                android:src="@drawable/call_icon"
+                android:src="@drawable/ic_launcher_call_foreground"
                 android:id="@+id/imageCallId"/>
             <TextView
                 android:layout_width="200dp"
@@ -127,7 +127,7 @@
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:layout_gravity="center"
-                android:src="@drawable/message_icon"
+                android:src="@drawable/ic_launcher_message_foreground"
                 android:id="@+id/imageMessageid"/>
             <TextView
                 android:layout_width="200dp"
