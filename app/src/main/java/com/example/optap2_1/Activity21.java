@@ -16,8 +16,8 @@ public class Activity21 extends AppCompatActivity {
         setContentView(R.layout.activity_21);
     }
    @Override
-   public boolean onCreateOptionsMenu(Menu menu) {
-       getMenuInflater().inflate(R.menu.menu_ot21, menu);
+   public boolean onCreateOptionsMenu(Menu m) {
+       getMenuInflater().inflate(R.menu.menu_ot21, m);
        return true;
    }
 }
