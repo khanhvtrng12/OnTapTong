@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button BtnOT1;
+    Button BtnOT1,BtnOT21;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private void GetView()
     {
         BtnOT1=(Button)findViewById(R.id.btnOntap1);
+        BtnOT21=(Button)findViewById(R.id.btnOntap21);
     }
     //Tạo Event
     private void Event()
@@ -31,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
                 Ontap1();
             }
         });
+        BtnOT21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Ontap21();
+            }
+        });
     }
     private void Ontap1()
     {
@@ -38,5 +45,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intentOntap1=new Intent(this,ActivityOntap1.class);
         //Mở Trang Chủ
         startActivity(intentOntap1);
+    }
+    private void Ontap21()
+    {
+        //khởi tạo và thiết lập
+        Intent intentOntap21=new Intent(this,Activity21.class);
+        //Mở Trang Chủ
+        startActivity(intentOntap21);
     }
 }
