@@ -2,6 +2,8 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Cấu hình" />
-    <item android:id="@+id/item1" android:title="Thoát" />
+     <item android:title="Cấu hình"
+        android:id="@+id/CauHinh"/>
+    <item android:title="Thoát"
+        android:id="@+id/Thoat"/>
 </menu>
