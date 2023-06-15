@@ -19,6 +19,14 @@
             android:name=".ActivityOntap1"
             android:exported="false" />
         <activity
+            android:name=".Activity22menu"
+            android:label="Quản Lý Khóa học"
+            android:exported="false" />
+        <activity
+            android:name=".Activiy22"
+            android:label="Quản Lý Công Việc"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
