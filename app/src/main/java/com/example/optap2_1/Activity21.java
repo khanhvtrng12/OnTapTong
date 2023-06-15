@@ -4,10 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuItemCompat;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Activity21 extends AppCompatActivity {
     Activity21KhDatabase khoahocdatabase;
@@ -20,7 +25,7 @@ public class Activity21 extends AppCompatActivity {
         setContentView(R.layout.activity_21);
          lvkhoahoc = (ListView) findViewById(R.id.lvKhoaHoc);
         arrayList = new ArrayList<Activity21KH>();
-        khoahocadapter= new Activity21KhAdapter(this,R.layout.activity_21_list,arrayList);
+        khoahocadapter= new Activity21KhAdapter(this,R.layout.activity_custom_lst_v21,arrayList);
         lvkhoahoc.setAdapter(khoahocadapter);
         //tạo Database
         khoahocdatabase=new Activity21KhDatabase(this,"QuanLyKhoaHoc.sqlite",null,1);
@@ -79,4 +84,4 @@ public class Activity21 extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-}
+
