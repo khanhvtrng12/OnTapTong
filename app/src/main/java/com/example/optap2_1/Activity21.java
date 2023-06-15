@@ -30,7 +30,7 @@ public class Activity21 extends AppCompatActivity {
         //tạo Database
         khoahocdatabase=new Activity21KhDatabase(this,"QuanLyKhoaHoc.sqlite",null,1);
         //Xóa bảng
-        String sqlDrop="DROP TABLE KhoaHoc";
+        String sqlDrop="DROP TABLE IF EXISTS KhoaHoc";
         khoahocdatabase.QueryData(sqlDrop);
         //Tạo bảng
         String sql="CREATE TABLE IF NOT EXISTS KhoaHoc(Id INTEGER PRIMARY KEY AUTOINCREMENT,Ten nvarchar(80),HocPhi nvarchar(20))";

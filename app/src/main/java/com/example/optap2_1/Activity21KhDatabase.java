@@ -25,6 +25,8 @@ public class Activity21KhDatabase extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
+        String sql = "CREATE TABLE IF NOT EXISTS KHOAHOC(ID INTEGER PRIMARY KEY AUTOINCREMENT, TENKHOAHOC VARCHAR(200), HOCPHI VARCHAR(200))";
+        db.execSQL(sql);
 
     }
 
