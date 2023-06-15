@@ -25,6 +25,7 @@ public class OT2_2_DBHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE);
     }
 
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // drop table if it exists

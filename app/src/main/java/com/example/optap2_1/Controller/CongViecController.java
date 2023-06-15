@@ -16,7 +16,6 @@ import java.util.List;
 public class CongViecController {
     private final OT2_2_DBHelper OT2_2_DBHelper;
     private SQLiteDatabase database;
-
     public CongViecController(Context context) {
         OT2_2_DBHelper = new OT2_2_DBHelper(context);
     }

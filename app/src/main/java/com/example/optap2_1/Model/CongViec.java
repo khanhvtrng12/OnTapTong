@@ -6,7 +6,9 @@ public class CongViec {
     private String thoiGianThucHien;
 
     // constructors
-    public CongViec() {}
+    public CongViec() {
+
+    }
 
     public CongViec(int id, String tenCV, String thoiGianThucHien) {
         this.id = id;
