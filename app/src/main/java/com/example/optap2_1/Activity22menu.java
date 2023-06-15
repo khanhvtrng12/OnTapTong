@@ -18,12 +18,7 @@ public class Activity22menu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_22_tcv);
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(menu_ot22,menu);
-        return true;
-    }
+
     @Override
     public boolean onOptionsItemSelected( MenuItem item)
     {
