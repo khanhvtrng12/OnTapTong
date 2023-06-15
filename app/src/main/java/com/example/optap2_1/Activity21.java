@@ -76,7 +76,7 @@ public class Activity21 extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.CauHinh)
         {
-            Toast.makeText(this, "Bạn Đã Chọn Cấu hình", Toast.LENGTH_SHORT).show();
+            CustomToast.makeText(this, "Bạn Đã Chọn Cấu hình", Toast.LENGTH_LONG,CustomToast.SUCCESS,true).show();
         }else if (id == R.id.Thoat)
         {
             finish();
