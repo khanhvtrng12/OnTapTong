@@ -3,44 +3,43 @@ package com.example.optap2_1.Controller;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.optap2_1.Model.CongViec;
-import com.example.optap2_1.Service.OT2_2_DBHelper;
+import com.example.optap2_1.Service.CongViec_DBHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class CongViecController {
-    private final OT2_2_DBHelper OT2_2_DBHelper;
+    private final CongViec_DBHelper CongViec_DBHelper;
     private SQLiteDatabase database;
     public CongViecController(Context context) {
-        OT2_2_DBHelper = new OT2_2_DBHelper(context);
+        CongViec_DBHelper = new CongViec_DBHelper(context);
     }
 
     public void open() {
-        database = OT2_2_DBHelper.getWritableDatabase();
+        database = CongViec_DBHelper.getWritableDatabase();
     }
 
     public void close() {
-        OT2_2_DBHelper.close();
+        CongViec_DBHelper.close();
     }
 
     public void addCongViec(CongViec CongViec) {
         ContentValues values = new ContentValues();
-        values.put(com.example.optap2_1.Service.OT2_2_DBHelper.COLUMN_TENCV, CongViec.getTenCV());
-        values.put(com.example.optap2_1.Service.OT2_2_DBHelper.COLUMN_THOIGIANTHUCHIEN, CongViec.getThoiGianThucHien());
+        values.put(CongViec_DBHelper.COLUMN_TENCV, CongViec.getTenCV());
+        values.put(CongViec_DBHelper.COLUMN_THOIGIANTHUCHIEN, CongViec.getThoiGianThucHien());
 
         // insert row
-        long id = database.insert(com.example.optap2_1.Service.OT2_2_DBHelper.TABLE_NAME, null, values);
+        long id = database.insert(CongViec_DBHelper.TABLE_NAME, null, values);
         CongViec.setId((int) id);
     }
 
-    public List<CongViec> getAllCongViec() {
-        List<CongViec> CongViecs = new ArrayList<>();
-        String selectQuery = "SELECT  * FROM " + com.example.optap2_1.Service.OT2_2_DBHelper.TABLE_NAME;
+    public ArrayList<CongViec> getAllCongViec() {
+        ArrayList<CongViec> CongViecs = new ArrayList<>();
+        String selectQuery = "SELECT  * FROM " + CongViec_DBHelper.TABLE_NAME;
         Cursor cursor = database.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
             do {
@@ -57,20 +56,20 @@ public class CongViecController {
 
     public void updateCongViec(CongViec CongViec) {
         ContentValues values = new ContentValues();
-        values.put(com.example.optap2_1.Service.OT2_2_DBHelper.COLUMN_TENCV, CongViec.getTenCV());
-        values.put(com.example.optap2_1.Service.OT2_2_DBHelper.COLUMN_THOIGIANTHUCHIEN, CongViec.getThoiGianThucHien());
+        values.put(CongViec_DBHelper.COLUMN_TENCV, CongViec.getTenCV());
+        values.put(CongViec_DBHelper.COLUMN_THOIGIANTHUCHIEN, CongViec.getThoiGianThucHien());
 
         // update row
-        database.update(com.example.optap2_1.Service.OT2_2_DBHelper.TABLE_NAME,
+        database.update(CongViec_DBHelper.TABLE_NAME,
                 values,
-                com.example.optap2_1.Service.OT2_2_DBHelper.COLUMN_ID + "=?",
+                CongViec_DBHelper.COLUMN_ID + "=?",
                 new String[]{String.valueOf(CongViec.getId())});
     }
 
     public void deleteCongViec(CongViec CongViec) {
         // delete row
-        database.delete(com.example.optap2_1.Service.OT2_2_DBHelper.TABLE_NAME,
-                com.example.optap2_1.Service.OT2_2_DBHelper.COLUMN_ID + "=?",
+        database.delete(CongViec_DBHelper.TABLE_NAME,
+                CongViec_DBHelper.COLUMN_ID + "=?",
                 new String[]{String.valueOf(CongViec.getId())});
     }
 }
