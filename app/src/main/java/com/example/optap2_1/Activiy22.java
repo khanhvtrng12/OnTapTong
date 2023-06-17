@@ -82,6 +82,11 @@ public class Activiy22 extends AppCompatActivity {
                 //Mở Trang Chủ
                 startActivity(intentOntap22menu);
                 return true;
+            case R.id.thoat:
+                Intent intentThoat = new Intent(this, MainActivity.class);
+                //Mở Trang Chủ
+                startActivity(intentThoat);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
