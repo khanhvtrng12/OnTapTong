@@ -7,7 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.optap2_1.Controller.CongViecController;
@@ -41,6 +43,28 @@ public class Activiy22 extends AppCompatActivity {
         congViecController.close();
         CongViecAdapter adapter = new CongViecAdapter(this, R.layout.activity_custom_lst_v22, arrayCongViec);
         listCongViec.setAdapter(adapter);
+
+        // hold to delete
+        listCongViec.setOnItemLongClickListener((parent, view, position, id) -> {
+            // tạo dialog xác nhận xóa
+            AlertDialog.Builder builder = new AlertDialog.Builder(Activiy22.this);
+            builder.setTitle("Xác nhận xóa công việc");
+            builder.setMessage("Bạn có chắc chắn muốn xóa công việc này?");
+            builder.setPositiveButton("Có", (dialog, which) -> {
+                congViecController.open();
+                congViecController.deleteCongViec(arrayCongViec.get(position));
+                congViecController.close();
+                arrayCongViec.remove(position);
+                adapter.notifyDataSetChanged();
+                // Toast
+                Toast.makeText(Activiy22.this, "Đã xóa thành công", Toast.LENGTH_SHORT).show();
+            });
+            builder.setNegativeButton("Không", (dialog, which) -> dialog.cancel());
+            builder.show();
+
+
+            return false;
+        });
 
     }
 
